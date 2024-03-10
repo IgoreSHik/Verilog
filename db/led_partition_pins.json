@@ -1,0 +1,65 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "done",
+					"strict" : false
+				},
+				{
+					"name" : "bus[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bus[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bus[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bus[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bus[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bus[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bus[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bus[7]",
+					"strict" : false
+				},
+				{
+					"name" : "bus[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pclk",
+					"strict" : false
+				},
+				{
+					"name" : "run",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "mclk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
