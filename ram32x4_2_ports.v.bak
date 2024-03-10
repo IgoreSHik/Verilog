@@ -1,0 +1,17 @@
+module ram32x4_2_ports(
+	input [4:0] address,
+	input clk,
+	input [3:0] data,
+	input wren,
+	output [3:0] q);
+
+	reg [3:0] memory_array[31:0];
+	
+	always @(posedge clk) begin
+		if (wren)
+			memory_array[address] = data;		
+	end
+	
+	assign q = memory_array[address]; 
+
+endmodule

@@ -1,0 +1,4 @@
+module multiplier_N_bits_map(
+	input [7:0] SW,
+	i
+);

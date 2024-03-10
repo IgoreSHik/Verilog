@@ -1,0 +1,14 @@
+module rotate_display(
+	input clk,
+	output [0:6] h0,
+	output [0:6] h1,
+	output [0:6] h2,
+	output [0:6] h3);
+	
+	reg [1:0] q;
+	mod_10_with_delay #(4, 50) m(clk, q);
+	always @(q)
+		
+	end
+	
+endmodule

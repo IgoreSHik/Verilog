@@ -1,0 +1,33 @@
+module multiplier_N_bits(
+	input [N-1:0] A, B,
+	output [2*N-1:0] P);
+
+	wire [N-1:0] PP[N-1:0]; 
+	wire [N-1:0] s[1:N-1]; 
+	wire cout[1:N-1]; 
+	genvar i;
+	
+	generate
+		for (i = 0; i < N; i = i + 1) begin:bl1
+			assign PP[i] = A & {N{B[i]}};
+		end
+	endgenerate
+	
+	adder_N_bits #(N) a0({1'b0, PP[0][N-1:1]}, PP[1], 1'b0, s[1], cout[1]);
+	generate
+		for(i=2;i<N;i=i+1) begin:bl2
+			adder_N_bits #(N) ai({cout[i-1], s[i-1][N-1:1]}, PP[i], 1'b0, s[i], cout[i]);
+		end
+	endgenerate
+	
+	assign P[0] = PP[0][0];
+	generate
+		for(i=1;i<N-1;i=i+1) begin:bl3
+			assign P[i] = s[i][0];
+		end
+	endgenerate
+	
+	assign P[2*N-2:N-1] = s[N-1];
+	assign P[2*N-1] = cout[N-1];
+	
+endmodule
