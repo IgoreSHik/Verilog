@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'pclk'
+Slack : -5.369
+TNS   : -454.676
+
+Type  : Slow 1100mV 85C Model Setup 'mclk'
+Slack : -0.447
+TNS   : -3.211
+
+Type  : Slow 1100mV 85C Model Hold 'pclk'
+Slack : 0.264
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'mclk'
+Slack : 0.287
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mclk'
+Slack : -2.174
+TNS   : -26.445
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'pclk'
+Slack : -0.394
+TNS   : -54.484
+
+Type  : Slow 1100mV 0C Model Setup 'pclk'
+Slack : -5.466
+TNS   : -460.029
+
+Type  : Slow 1100mV 0C Model Setup 'mclk'
+Slack : -0.384
+TNS   : -3.225
+
+Type  : Slow 1100mV 0C Model Hold 'pclk'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'mclk'
+Slack : 0.271
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mclk'
+Slack : -2.174
+TNS   : -26.893
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'pclk'
+Slack : -0.394
+TNS   : -58.224
+
+Type  : Fast 1100mV 85C Model Setup 'pclk'
+Slack : -2.917
+TNS   : -238.094
+
+Type  : Fast 1100mV 85C Model Setup 'mclk'
+Slack : 0.134
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'pclk'
+Slack : 0.160
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'mclk'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mclk'
+Slack : -2.174
+TNS   : -22.351
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'pclk'
+Slack : -0.083
+TNS   : -8.087
+
+Type  : Fast 1100mV 0C Model Setup 'pclk'
+Slack : -2.703
+TNS   : -222.635
+
+Type  : Fast 1100mV 0C Model Setup 'mclk'
+Slack : 0.219
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'pclk'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'mclk'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mclk'
+Slack : -2.174
+TNS   : -22.342
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'pclk'
+Slack : -0.081
+TNS   : -7.875
+
+------------------------------------------------------------

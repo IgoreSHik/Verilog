@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at counter_modulo_k.v(16): always construct contains both blocking and non-blocking assignments File: C:/Users/Igor/Desktop/ps10n11/counter_modulo_k.v Line: 16
+Warning (10268): Verilog HDL information at accum_N_bits.v(10): always construct contains both blocking and non-blocking assignments File: C:/Users/Igor/Desktop/ps10n11/accum_N_bits.v Line: 10
+Warning (10268): Verilog HDL information at add_sub_N_bits.v(10): always construct contains both blocking and non-blocking assignments File: C:/Users/Igor/Desktop/ps10n11/add_sub_N_bits.v Line: 10
