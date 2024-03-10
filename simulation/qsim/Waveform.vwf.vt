@@ -18,38 +18,100 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/12/2022 12:50:11"
+// Generated on "03/06/2022 21:18:34"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          mod_10_clock
+// Verilog Test Bench (with test vectors) for design :                          SW2
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module mod_10_clock_vlg_vec_tst();
+module SW2_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg CLOCK_50;
+reg [3:0] a;
+reg [3:0] b;
+reg cin;
 // wires                                               
-wire [0:6] HEX0;
+wire cout;
+wire [3:0] s;
 
 // assign statements (if any)                          
-mod_10_clock i1 (
+SW2 i1 (
 // port map - connection between master ports and signals/registers   
-	.CLOCK_50(CLOCK_50),
-	.HEX0(HEX0)
+	.a(a),
+	.b(b),
+	.cin(cin),
+	.cout(cout),
+	.s(s)
 );
 initial 
 begin 
-#1000000 $finish;
+#1280000 $finish;
 end 
 
-// CLOCK_50
+// cin
 always
 begin
-	CLOCK_50 = 1'b0;
-	CLOCK_50 = #5000 1'b1;
+	cin = 1'b0;
+	cin = #640000 1'b1;
+	#640000;
+end 
+// a[ 3 ]
+always
+begin
+	a[3] = 1'b0;
+	a[3] = #320000 1'b1;
+	#320000;
+end 
+// a[ 2 ]
+always
+begin
+	a[2] = 1'b0;
+	a[2] = #160000 1'b1;
+	#160000;
+end 
+// a[ 1 ]
+always
+begin
+	a[1] = 1'b0;
+	a[1] = #80000 1'b1;
+	#80000;
+end 
+// a[ 0 ]
+always
+begin
+	a[0] = 1'b0;
+	a[0] = #40000 1'b1;
+	#40000;
+end 
+// b[ 3 ]
+always
+begin
+	b[3] = 1'b0;
+	b[3] = #20000 1'b1;
+	#20000;
+end 
+// b[ 2 ]
+always
+begin
+	b[2] = 1'b0;
+	b[2] = #10000 1'b1;
+	#10000;
+end 
+// b[ 1 ]
+always
+begin
+	b[1] = 1'b0;
+	b[1] = #5000 1'b1;
 	#5000;
+end 
+// b[ 0 ]
+always
+begin
+	b[0] = 1'b0;
+	b[0] = #2500 1'b1;
+	#2500;
 end 
 endmodule
 
