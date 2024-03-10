@@ -1,0 +1,7 @@
+module choose_form_4_symbols (
+	input [9:0] SW,
+	output [0:6] HEX0);
+
+	choose_from_4_symbols cf4s(SW, HEX0);
+	
+endmodule

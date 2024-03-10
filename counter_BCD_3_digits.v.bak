@@ -1,0 +1,10 @@
+module counter_BCD_3_digits(
+	input clk, areset, enable,
+	output [9:0] q);
+		
+	wire modEnable;
+	delay #(50) d(clk, modEnable); 
+	
+	counter_mod_M cnt(enable, modEnable, areset, q);
+	
+endmodule

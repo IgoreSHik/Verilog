@@ -1,0 +1,8 @@
+module mux_on_board(
+	input [1:0] SW, KEY0,
+	output LEDR0);
+	
+	mux_2_1_1 ex(SW[0], SW[1], KEY0, LEDR0);
+
+endmodule
+	

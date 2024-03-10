@@ -1,0 +1,13 @@
+module detractor_with_shift_reg(
+	input w, clk, areset,
+	output z
+);
+	
+	wire [3:0] out0;
+	wire [3:0] out1;
+	n_bit_shift_register #(4) r0(w, clk, areset, out0);
+	n_bit_shift_register #(4) r1(w, clk, areset, out1);
+	
+	assign z = &out0 || ~(|out1);
+
+endmodule

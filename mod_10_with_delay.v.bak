@@ -1,0 +1,12 @@
+module mod_10_with_10s (
+	input enable, clk, areset,
+	output [3:0] Q);
+	
+	reg [3:0] Qa;	
+	counter_N_bits #(4) c0(1, clk, 1, Qa);	
+	assign modEnable =| Qa;
+	
+	counter_mod_M #(10) c1(modEnable, clk, 1, Q);
+	
+endmodule
+	

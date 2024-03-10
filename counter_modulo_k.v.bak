@@ -1,0 +1,20 @@
+module counter_modulo_k(
+	input clk, aclr, enable
+	output [N-1:0] q, 
+	output rollover
+);
+	
+	parameter k = 20;
+	parameter N = clogb2(k - 1);
+
+	function integer clogb2(input [31:0] v);
+		for (clogb2 = 0; v > 0; clogb2 = clogb2 +1)
+			v = v >> 1;
+	endfunction	
+
+	always @(posedge clk, negedge aclr, enable)
+		if (aclr) q <= {N{1'b0}};
+		else if (clk && enable) q <= q + 1;
+		else q <= q;	
+	
+endmodule

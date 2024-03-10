@@ -1,0 +1,14 @@
+module adder_A_B_8_bits(
+	input areset, clk,
+	input [7:0] X,
+	output cout,
+	output [7:0] S);
+	
+	wire [7:0] num;
+	
+	assign S = num + X;
+	assign cout = num[7] & X[7];
+	
+	reg_N_bits_with_areset #(8) register(areset, clk, X, num);		
+	
+endmodule

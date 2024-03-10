@@ -1,0 +1,8 @@
+module decoder_7_seg_assign (
+	input [1:0] SW,
+	output [6:0] HEX0);
+		
+	decoder_7_seg(SW, HEX0);
+	
+endmodule
+	

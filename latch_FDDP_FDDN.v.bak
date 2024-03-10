@@ -1,0 +1,11 @@
+module latch_FDDP_FDDN(
+	input D, Clk,
+	output Qa, Qb, Qc);
+	
+	latch_D a(D, Clk, Qa);
+	latch_D b(D, Clk, Qb);
+	latch_D c(D, ~Clk, Qc);
+	
+endmodule
+	
+	

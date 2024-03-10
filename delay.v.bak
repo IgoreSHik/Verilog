@@ -1,0 +1,5 @@
+module delay(
+	input clk,
+	output q);
+	
+endmodule

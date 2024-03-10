@@ -1,0 +1,23 @@
+module adder_BCD_2_digits(
+	input [3:0] x,
+	input [3:0] y,
+	input cin,
+	output [3:0] s0,
+	output [3:0] s1,
+	output error);
+	
+	wire [3:0] s;
+	reg [3:0] couts;
+	wire cout;
+	
+	adder_4 a0(cin, x, y, s, cout);	
+	assign cout = cout | s[3] & s[2] | s[1] & s[0];
+	
+	couts[0] = 0;
+	couts[1] = couts[2] = couts[3] = cout;
+	
+	adder_4 a1(cin, s, couts, s0, cout);
+	
+	s1[0] = couts[0];
+	
+endmodule

@@ -1,0 +1,14 @@
+module decoder_7_seg (
+	input [1:0] c,
+	output [6:0] h);
+	
+	always @ (c) begin
+		case(c)
+			2'b00: h = 2'b0110111;
+			2'b01: h = 2'b1111111;
+			2'b10: h = 2'b0000110;
+			2'b11: h = 2'b1111111;
+		endcase
+	end
+	
+endmodule
