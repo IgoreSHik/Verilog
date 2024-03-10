@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off SW2 -c SW2 --vector_source="C:/Users/Igor/Desktop/SW2/Waveform.vwf" --testbench_file="C:/Users/Igor/Desktop/SW2/simulation/qsim/Waveform.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off SW2_on_board -c SW2_on_board --vector_source="C:/Users/Igor/Desktop/SW2_on_board/Waveform.vwf" --testbench_file="C:/Users/Igor/Desktop/SW2_on_board/simulation/qsim/Waveform.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -25,8 +25,8 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Sun Mar 06 21:18:32 2022
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off SW2 -c SW2 --vector_source=C:/Users/Igor/Desktop/SW2/Waveform.vwf --testbench_file=C:/Users/Igor/Desktop/SW2/simulation/qsim/Waveform.vwf.vt
+    Info: Processing started: Tue Mar 08 13:05:40 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off SW2_on_board -c SW2_on_board --vector_source=C:/Users/Igor/Desktop/SW2_on_board/Waveform.vwf --testbench_file=C:/Users/Igor/Desktop/SW2_on_board/simulation/qsim/Waveform.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 Completed successfully. 
@@ -35,7 +35,7 @@ Completed successfully.
 
 **** Generating the timing simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Igor/Desktop/SW2/simulation/qsim/" SW2 -c SW2
+quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Igor/Desktop/SW2_on_board/simulation/qsim/" SW2_on_board -c SW2_on_board
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -53,86 +53,83 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Sun Mar 06 21:18:34 2022
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Igor/Desktop/SW2/simulation/qsim/ SW2 -c SW2
+    Info: Processing started: Tue Mar 08 13:05:43 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Igor/Desktop/SW2_on_board/simulation/qsim/ SW2_on_board -c SW2_on_board
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
-Info (204019): Generated file SW2.vo in folder "C:/Users/Igor/Desktop/SW2/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file SW2_on_board.vo in folder "C:/Users/Igor/Desktop/SW2_on_board/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4731 megabytes
-    Info: Processing ended: Sun Mar 06 21:18:37 2022
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4732 megabytes
+    Info: Processing ended: Tue Mar 08 13:05:45 2022
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-C:/Users/Igor/Desktop/SW2/simulation/qsim/SW2.do generated.
+C:/Users/Igor/Desktop/SW2_on_board/simulation/qsim/SW2_on_board.do generated.
 
 Completed successfully. 
 
 **** Running the ModelSim simulation ****
 
-C:/intelFPGA/18.0/modelsim_ase/win32aloem/vsim -c -do SW2.do
+C:/intelFPGA/18.0/modelsim_ase/win32aloem/vsim -c -do SW2_on_board.do
 
 Reading C:/intelFPGA/18.0/modelsim_ase/tcl/vsim/pref.tcl
 
 
 # 10.5b
 
-
-# do SW2.do
+# do SW2_on_board.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:18:48 on Mar 06,2022
-# vlog -work work SW2.vo 
 
-# -- Compiling module SW2
-
+# Start time: 13:05:51 on Mar 08,2022
+# vlog -work work SW2_on_board.vo 
+# -- Compiling module SW2_on_board
 # 
 # Top level modules:
-# 	SW2
-# End time: 21:18:49 on Mar 06,2022, Elapsed time: 0:00:01
+# 	SW2_on_board
+# End time: 13:05:51 on Mar 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:18:49 on Mar 06,2022
+# Start time: 13:05:51 on Mar 08,2022
 # vlog -work work Waveform.vwf.vt 
-# -- Compiling module SW2_vlg_vec_tst
+# -- Compiling module SW2_on_board_vlg_vec_tst
+
 # 
 # Top level modules:
-# 	SW2_vlg_vec_tst
-# End time: 21:18:49 on Mar 06,2022, Elapsed time: 0:00:00
+# 	SW2_on_board_vlg_vec_tst
+# End time: 13:05:51 on Mar 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.SW2_vlg_vec_tst 
-# Start time: 21:18:51 on Mar 06,2022
-# Loading work.SW2_vlg_vec_tst
-# Loading work.SW2
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.SW2_on_board_vlg_vec_tst 
+# Start time: 13:05:54 on Mar 08,2022
+# Loading work.SW2_on_board_vlg_vec_tst
+# Loading work.SW2_on_board
 # Loading cyclonev_ver.cyclonev_io_obuf
 # Loading cyclonev_ver.cyclonev_io_ibuf
 # Loading cyclonev_ver.cyclonev_lcell_comb
 # after#25
-
-# ** Note: $finish    : Waveform.vwf.vt(50)
-#    Time: 1280 ns  Iteration: 0  Instance: /SW2_vlg_vec_tst
-# End time: 21:18:53 on Mar 06,2022, Elapsed time: 0:00:02
+# ** Note: $finish    : Waveform.vwf.vt(44)
+#    Time: 1280 ns  Iteration: 0  Instance: /SW2_on_board_vlg_vec_tst
+# End time: 13:05:55 on Mar 08,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/Igor/Desktop/SW2/Waveform.vwf...
+Reading C:/Users/Igor/Desktop/SW2_on_board/Waveform.vwf...
 
-Reading C:/Users/Igor/Desktop/SW2/simulation/qsim/SW2.msim.vcd...
+Reading C:/Users/Igor/Desktop/SW2_on_board/simulation/qsim/SW2_on_board.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Igor/Desktop/SW2/simulation/qsim/SW2_20220306211854.sim.vwf
+Writing the resulting VWF to C:/Users/Igor/Desktop/SW2_on_board/simulation/qsim/SW2_on_board_20220308130555.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -7,37 +7,37 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Igor/Desktop/SW2/simulation/qsim
-vSW2
-Z1 !s110 1646597929
+Z0 dC:/Users/Igor/Desktop/SW2_on_board/simulation/qsim
+vSW2_on_board
+Z1 !s110 1646741151
 !i10b 1
-!s100 =hAj]]6noS@8FHI:A;70B0
-IPZaReGT[9a^NRCYjOU9DK2
+!s100 zlNA>Cd_4An`KKPk8HWeh2
+IJg@1ES0b5DLN0SU]IOSjS2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1646597917
-8SW2.vo
-FSW2.vo
+w1646741145
+8SW2_on_board.vo
+FSW2_on_board.vo
 L0 31
 Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1646597928.000000
-!s107 SW2.vo|
-!s90 -work|work|SW2.vo|
+Z4 !s108 1646741151.000000
+!s107 SW2_on_board.vo|
+!s90 -work|work|SW2_on_board.vo|
 !i113 1
-Z4 o-work work
-Z5 tCvgOpt 0
-n@s@w2
-vSW2_vlg_vec_tst
+Z5 o-work work
+Z6 tCvgOpt 0
+n@s@w2_on_board
+vSW2_on_board_vlg_vec_tst
 R1
 !i10b 1
-!s100 bGG9@Rje;YY4Xc6N]`V^D2
-IRYc4PWRF`SWUcfJX4FhP`1
+!s100 33YDTRJm9e5N@dkFAZ:B11
+I>Z18Y@SV=HZT]f`<4ePWe1
 R2
 R0
-w1646597914
+w1646741143
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29
@@ -45,10 +45,10 @@ R3
 r1
 !s85 0
 31
-!s108 1646597929.000000
+R4
 !s107 Waveform.vwf.vt|
 !s90 -work|work|Waveform.vwf.vt|
 !i113 1
-R4
 R5
-n@s@w2_vlg_vec_tst
+R6
+n@s@w2_on_board_vlg_vec_tst

@@ -18,100 +18,100 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/06/2022 21:18:34"
+// Generated on "03/08/2022 13:05:43"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          SW2
+// Verilog Test Bench (with test vectors) for design :                          SW2_on_board
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module SW2_vlg_vec_tst();
+module SW2_on_board_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [3:0] a;
-reg [3:0] b;
-reg cin;
+reg [9:0] SW;
 // wires                                               
-wire cout;
-wire [3:0] s;
+wire [9:0] LEDR;
 
 // assign statements (if any)                          
-SW2 i1 (
+SW2_on_board i1 (
 // port map - connection between master ports and signals/registers   
-	.a(a),
-	.b(b),
-	.cin(cin),
-	.cout(cout),
-	.s(s)
+	.LEDR(LEDR),
+	.SW(SW)
 );
 initial 
 begin 
 #1280000 $finish;
 end 
-
-// cin
+// SW[ 9 ]
 always
 begin
-	cin = 1'b0;
-	cin = #640000 1'b1;
+	SW[9] = 1'b0;
+	SW[9] = #640000 1'b1;
 	#640000;
 end 
-// a[ 3 ]
+// SW[ 8 ]
 always
 begin
-	a[3] = 1'b0;
-	a[3] = #320000 1'b1;
+	SW[8] = 1'b0;
+	SW[8] = #320000 1'b1;
 	#320000;
 end 
-// a[ 2 ]
+// SW[ 7 ]
 always
 begin
-	a[2] = 1'b0;
-	a[2] = #160000 1'b1;
+	SW[7] = 1'b0;
+	SW[7] = #160000 1'b1;
 	#160000;
 end 
-// a[ 1 ]
+// SW[ 6 ]
 always
 begin
-	a[1] = 1'b0;
-	a[1] = #80000 1'b1;
+	SW[6] = 1'b0;
+	SW[6] = #80000 1'b1;
 	#80000;
 end 
-// a[ 0 ]
+// SW[ 5 ]
 always
 begin
-	a[0] = 1'b0;
-	a[0] = #40000 1'b1;
+	SW[5] = 1'b0;
+	SW[5] = #40000 1'b1;
 	#40000;
 end 
-// b[ 3 ]
+// SW[ 4 ]
 always
 begin
-	b[3] = 1'b0;
-	b[3] = #20000 1'b1;
+	SW[4] = 1'b0;
+	SW[4] = #20000 1'b1;
 	#20000;
 end 
-// b[ 2 ]
+// SW[ 3 ]
 always
 begin
-	b[2] = 1'b0;
-	b[2] = #10000 1'b1;
+	SW[3] = 1'b0;
+	SW[3] = #10000 1'b1;
 	#10000;
 end 
-// b[ 1 ]
+// SW[ 2 ]
 always
 begin
-	b[1] = 1'b0;
-	b[1] = #5000 1'b1;
+	SW[2] = 1'b0;
+	SW[2] = #5000 1'b1;
 	#5000;
 end 
-// b[ 0 ]
+// SW[ 1 ]
 always
 begin
-	b[0] = 1'b0;
-	b[0] = #2500 1'b1;
+	SW[1] = 1'b0;
+	SW[1] = #2500 1'b1;
 	#2500;
+end 
+// SW[ 0 ]
+always
+begin
+	SW[0] = 1'b0;
+	SW[0] = #1250 1'b1;
+	#1250;
 end 
 endmodule
 
